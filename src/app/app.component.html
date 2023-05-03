@@ -1,0 +1,28 @@
+<app-header></app-header>
+<br>
+<h4 class="title">Bienvenido a Discos "El Brayan"</h4>
+<div class="grid">
+    <app-card [datoEntrante]="card" *ngFor="let card of cards"></app-card>
+</div>
+<div class="container">
+    <h4 class="title">Datos de Envio <p>(completalos para enviarte tu disco)</p></h4>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Ciudad">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Estado">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Pais">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Casa">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Descripcion de la casa">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Nombre completo de quien lo recibe">
+    </mat-form-field>
+    <button mat-raised-button color="" class="btn-primary" style="background-color: #00425A; color: aliceblue;">Enviar Datos para comprar</button>
+</div>

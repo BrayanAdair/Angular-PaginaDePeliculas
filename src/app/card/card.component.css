@@ -1,0 +1,33 @@
+.discosb{
+    text-align: center;
+    color: black;
+}
+.card{
+    text-align: center;
+    transition: 0.1s;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0,0, 0.2);
+    scale: 105%;
+}
+    
+.img{
+    border-radius: 8px 8px 0 0;
+}
+.button-primary{
+    display: inline-block;
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+    border: 0;
+    border-radius: 0.3rem;
+    background-color: #1F8A70;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}

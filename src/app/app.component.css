@@ -1,0 +1,19 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 1rem;
+    padding-bottom: 1rem;
+}
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 1rem auto;
+}
+.title{
+    text-align: center;
+    color: #00425A;
+    font-size: 20px;
+    font-weight: 800;
+}
