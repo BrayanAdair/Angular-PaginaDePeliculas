@@ -1,0 +1,99 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    padding-bottom: 1rem;
+}
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 1rem auto;
+}
+.title{
+    text-align: center;
+    color: #00425A;
+    font-size: 20px;
+    font-weight: 800;
+}
+.containerAdmin{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-shadow: -1px -1px .1em #bebfbf;
+    text-align: center;
+    border-width: 20cm;
+    margin: 20px;
+    padding: 20px;
+    background-color: #645CBB;
+    border-width: 5px;
+    box-sizing: border-box;
+    
+  }
+  .tablapeliculas{
+    margin: 0 auto;
+  }
+  .button-primary{
+      display: inline-block;
+      margin: 0;
+      padding: 0.5rem 0.5rem;
+      border: 0;
+      border-radius: 0.3rem;
+      background-color: #645CBB;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: pointer;
+  }
+  .btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .btn-danger:hover {
+    color: #fff;
+    background-color: #070707;
+    border-color: #bd2130;
+  }
+  .btn-danger:focus, .btn-danger.focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  }
+  .btn-danger.disabled, .btn-danger:disabled {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  .btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .btn-success:hover {
+    color: #fff;
+    background-color: #070707;
+    border-color: #bd2130;
+  }
+  .btn-success:focus, .btn-success.focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  }
+  .btn-success.disabled, .btn-success:disabled {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+
+  

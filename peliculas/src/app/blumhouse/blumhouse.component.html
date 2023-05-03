@@ -1,0 +1,47 @@
+<h1 class="tituloseccion">Todas las pelicuas de <b style="color: red;">BlumHouse</b></h1>
+
+<mat-tab-group>
+  <mat-tab label="BlumHouse">
+    <br>
+    <div class="grid">
+      <div class="card" *ngFor="let card of cards | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+        <app-card [datoEntrante]="card"></app-card>
+      </div>
+    </div>
+    <div class="controlpag">
+      <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+    </div>
+  </mat-tab>
+  <mat-tab label="BlumHouse ADMIN">
+    <br>
+    <div class="containerAdmin" id="controlpeliculas">
+      <h1>Edita el Titulo y Sinopsis de la pelicula por su ID</h1>
+     <div class="textoAdmin">
+          <input  [(ngModel)]="art.id"  type="number"placeholder="escribe el id" />
+          <input [(ngModel)]="art.title" type="text" placeholder="escribe el nuevo Titulo" />
+          <input [(ngModel)]="art.descripcion" type="text" placeholder="escribe la nueva Sinopsis" />
+          <br><br>
+          <!-- <button (click)="agregar()" style="background-color: #00c16e;" class="button-primary"  >Actualizar Info</button> &nbsp; -->
+          <button (click)="modificar()" style="background-color: #fa7014;" class="button-primary"  >modificar Info</button> 
+     </div>
+     <br>
+     <table class="tablapeliculas" border="3" *ngIf="hayRegistros(); else sinpeliculas">
+      <tr>
+        <td>ID:</td><td>titulo</td><td>descripcion</td><td>borrar</td><td>seleccionar</td>
+      </tr>
+      <tr *ngFor="let art of cards">
+        <td>{{art.id}}</td>
+        <td>{{art.title}}</td>
+        <td>{{art.descripcion}}</td>
+        <td><button class="btn btn-danger" (click)="borrar(art.id)"><i class="fas fa-trash"></i>&nbsp; Borrar</button></td>
+        <td><button class="btn btn-success" (click)="seleccionar(art)"><i class="fas fa-check-circle"></i>&nbsp;Seleccionar</button></td>
+      </tr>
+    </table>
+    <br>
+    <ng-template #sinpeliculas><p>no hay peliculas</p></ng-template>
+    <div>
+    
+    </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

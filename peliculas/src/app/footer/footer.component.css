@@ -1,0 +1,11 @@
+.footerdiv{
+    background-color:#645CBB;
+    border-bottom: solid 10% #000000(247, 247, 247);
+    height: 10%;
+
+}
+.footer{
+    border-color: aliceblue;
+    border-width: 10%;    
+    text-align: center;
+}

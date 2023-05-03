@@ -1,0 +1,32 @@
+.header{
+    background-color:#645CBB;
+    border-bottom: solid 4px #000000(247, 247, 247);
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+}
+
+.logo{
+    height: 2rem;
+}
+
+.menu li{
+    cursor: pointer;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    text-align: center;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  

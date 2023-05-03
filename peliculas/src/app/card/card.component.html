@@ -1,0 +1,25 @@
+<div class="card">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        <b>{{datoEntrante?.title}}</b>
+      </mat-card-title>
+      <mat-card-subtitle>
+        Su ID es:<b>{{datoEntrante?.id}}</b>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <img class="image" [src]="datoEntrante?.img" style="width:100%" alt="img-card">
+    <mat-card-content>
+    <small>{{datoEntrante?.descripcion}}</small>
+    </mat-card-content>
+    <mat-card-actions class="acciones">
+      <button class="button-danger" mat-stroked-button sr (click)="clickAlerta()">Ver En Pirata </button>&nbsp;
+      <button class="button-primary" mat-stroked-button><a class="linki" href="{{datoEntrante?.trailer}}">Ver Trailer </a></button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+

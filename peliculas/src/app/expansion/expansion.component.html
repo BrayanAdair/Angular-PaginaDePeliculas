@@ -1,0 +1,102 @@
+<mat-grid-list cols="2" rowHeight="2:1" class="container">
+  <mat-grid-tile class="container2">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-subtitle>Acerca de Nosotros</mat-card-subtitle>
+        <mat-card-title>"Cartelera del Brayan"</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Somos una plataforma que te mostrara el trailer de la pelicula y un enlace hacia un sitio pirata donde podras verla gratis</p>
+        <p>{{ longText }}</p>
+        <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <p>by: Brayan Adair Montaño Zamora</p>
+      </mat-card-actions>
+      <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+    
+  </mat-grid-tile>
+<mat-grid-tile class="container2">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          ¿Donde nos ubicamos?
+        </mat-panel-title>
+        <mat-panel-description>
+          Ve nuestro mapa
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15010.8120693031!2d-98.9783659!3d19.8525151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d191f7cd9477c1%3A0xcfeabb34f9a99754!2sBzSoftwares!5e0!3m2!1ses-419!2smx!4v1680131884434!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Contactanos
+        </mat-panel-title>
+        <mat-panel-description>
+          La pestaña esta{{panelOpenState ? ' Abierta' : ' Cerrada'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <!-- inicia form -->
+      <button mat-raised-button (click)="isOptional = !isOptional">
+        {{!isOptional ? 'Habilita todos los pasos' : 'Deshabilita todos los pasos'}}
+      </button>
+      
+      <mat-stepper linear #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Escribe tu nombre</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="Nombre completo" formControlName="firstCtrl" >
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Siguiente</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Escribe tu correo</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Correo Electronico</mat-label>
+              <input matInput formControlName="secondCtrl" required placeholder="ejemplo@utvam.edu.mx"
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Regresar</button>
+              <button mat-button matStepperNext>Siguiente</button>
+            </div>
+          </form>
+        </mat-step>
+
+
+        <mat-step>
+          <ng-template matStepLabel>Enviar</ng-template>
+          <p>Con estos datos son mas que suficientes para poder contactarte.</p>
+            
+          <div>
+            <button mat-button matStepperPrevious>Regresar</button>
+            <!-- <button mat-button (click)="stepper.reset()">Enviar y resetear</button> -->
+            <button mat-stroked-button (click)="mostrarSnackbar()">enviar</button>
+            
+          </div>
+        </mat-step>
+      </mat-stepper>
+      
+      <!-- termina form -->
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+</mat-grid-tile>
+</mat-grid-list>
+<!-- aqui quitas el omenta4rio -->
+
+<div class="acordion">
+
+</div>

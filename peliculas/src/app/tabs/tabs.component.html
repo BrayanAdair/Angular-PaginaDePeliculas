@@ -1,0 +1,33 @@
+<mat-tab-group>
+  <mat-tab label="¿Como Ganar?">
+      <div class="containerdado">
+        <h1>¿Acerca de como ganar y nosotros?</h1>
+        <p></p>
+        <h3 class="textoabout">Esta pagina es desarrollada en angular creada por Brayan Adair Montaño Zamora con el objetivo de mostrarte los diferentes traillers de las peliculas de diferentes categorias, ademas que te regalamos una cuenta de HBO MAX totalmente gratis lo unico que tienes que hacer es seguir los pasos:</h3><br>
+        <p><b class="numbers">1° &nbsp;</b> Desliza o da click en "Prueba tu suerte"</p><br>
+        <p><b class="numbers">2° &nbsp;</b> Da click en el boton de "Tira los dados para ganar una cuenta"</p>
+        <p><b class="numbers">3° &nbsp;</b> Si los numeros son iguales entonces te aparecera abajo un correo y contraseña que podras usar para la cuenta de HBO MAX</p>
+
+      </div>
+  </mat-tab>
+  <mat-tab label="Prueba tu suerte">
+    
+<div class="containerdado">
+  <h1>Juega al Dado</h1>
+  <p>Presiona el botón para tirar los dados:</p>
+  <br>
+  <br>
+  <div >
+    <p class="forma">{{ valor1 }}</p>
+    <p class="forma">{{ valor2 }}</p>
+    <p class="forma">{{ valor3 }}</p>
+  </div>
+  <br>
+  <button class="button-primary" (click)="tirar()">Tirar Dados para ganar una cuenta</button>
+  <br>
+  <p>{{ resultado }}</p>
+</div>
+
+  </mat-tab>
+
+</mat-tab-group>
